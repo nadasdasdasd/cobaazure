@@ -1,5 +1,6 @@
 #!/bin/bash
 
+ENV_DIR="."
 WORKDIR="${1:-public}"
 
 echo "Generating env file..."
@@ -29,7 +30,7 @@ do
   
   # Append configuration property to JS file
   echo "  $varname: \"$value\"," >> $WORKDIR/env-config.js
-done < $WORKDIR/.env
+done < $ENV_DIR/.env
 
 echo "}" >> $WORKDIR/env-config.js
 echo "Test Generating env file... -> DONE"
