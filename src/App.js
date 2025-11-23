@@ -1,8 +1,9 @@
-import React from 'react';
+import { EnvironmentVariables } from './models/environment';
+import env from './modules/env/env';
 
 function App() {
-  const value = 'World';
-  return <div>Hello {value}</div>;
+  const value = env(EnvironmentVariables.googleUrl);;
+  return <div>url env value: {value}</div>;
 }
 
 export default App;
