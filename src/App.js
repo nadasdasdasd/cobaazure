@@ -1,7 +1,9 @@
+// eslint-disable-next-line @typescript-eslint/no-unused-vars
+import React from 'react';
 import { EnvironmentVariables } from './models/environment';
 import env from './modules/env/env';
-
 function App() {
+
   const value = env(EnvironmentVariables.googleUrl);;
   return <div>url env value: {value}</div>;
 }
